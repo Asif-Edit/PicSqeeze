@@ -4,51 +4,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PicSqeeze - Image compression and format conversion tool. Compress JPEG, PNG, GIF and convert formats easily online." />
-  <meta name="keywords" content="Image compression, Convert image format, JPEG to PNG, PNG to GIF, Image optimization tool" />
+  <meta name="description" content="PicSqeeze - Compress and convert images instantly online. Convert JPEG, PNG, GIF formats and optimize file size easily." />
+  <meta name="keywords" content="Image compression, Image format converter, JPEG to PNG, PNG to GIF, online image optimizer" />
   <meta name="author" content="PicSqeeze Team" />
-  <title>PicSqeeze - Image Compression & Format Converter</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>PicSqeeze - Compress & Convert Images Online</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f5f7fa;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
       color: #333;
     }
 
     header {
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      padding: 20px;
-      text-align: center;
+      background: linear-gradient(to right, #667eea, #764ba2);
       color: white;
+      padding: 50px 20px 30px;
+      text-align: center;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    nav {
-      margin-top: 10px;
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
-    nav a {
+    .cta-buttons {
+      margin-top: 30px;
+    }
+
+    .cta-buttons a {
       display: inline-block;
-      margin: 5px 10px;
+      margin: 10px;
+      padding: 14px 28px;
+      background: #ff4081;
       color: white;
-      background-color: #ff4081;
-      padding: 8px 16px;
-      text-decoration: none;
       font-weight: bold;
-      border-radius: 6px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s ease;
     }
 
-    nav a:hover {
-      background-color: #f06292;
+    .cta-buttons a:hover {
+      background: #f06292;
     }
 
     section {
@@ -56,116 +65,91 @@
       text-align: center;
     }
 
-    .btn-link {
-      display: inline-block;
-      padding: 14px 28px;
-      margin: 10px 5px;
-      background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      border: 2px solid #333;
-    }
-
-    .btn-link:hover {
-      opacity: 0.85;
-    }
-
     .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
+      margin-top: 40px;
     }
 
     .feature {
-      background: white;
-      padding: 30px;
+      background: #ffffff;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      max-width: 300px;
+      padding: 25px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+      transition: transform 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature h3 {
+      color: #673ab7;
     }
 
     footer {
       background: #222;
-      color: #aaa;
+      color: #ccc;
       padding: 20px;
+      font-size: 14px;
       text-align: center;
     }
 
     @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-        align-items: center;
+      header h1 {
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- 🌟 Hero Section with CTA -->
   <header>
     <h1>PicSqeeze</h1>
-    <p>Compress & Convert Images Instantly</p>
-    <nav>
-      <a href="#get-started">📥 Start Using Tools (Section)</a>
-      <a href="#features">✨ Explore Features (Section)</a>
-      <a href="#tools">🛠️ Access Tools (Section)</a>
-      <a href="#contact">📧 Contact Support (Section)</a>
-      <a href="/PicSqeeze/img-sqeeze.html">📥 Start Using Tools (Tool Page)</a>
-      <a href="/PicSqeeze/img-sqeeze.html">✨ Explore Features (Tool Page)</a>
-      <a href="/PicSqeeze/img-sqeeze.html>🛠️ Access Tools (Tool Page)</a>
-      <a href="/PicSqeeze/img-sqeeze.html">📧 Contact Support (Tool Page)</a>
-    </nav>
+    <p>Fast & Easy Online Image Compression and Format Conversion Tool</p>
+
+    <div class="cta-buttons">
+      <!-- 🧰 Link to tool page -->
+      <a href="/picsqeeze/img-sqeeze.html">🚀 Launch Tool</a>
+      <!-- 📨 Link to contact support -->
+      <a href="mailto:support@picsqeeze.com">📩 Contact Support</a>
+    </div>
   </header>
 
-  <section class="hero" id="get-started">
-    <h2>Optimize Your Images for Speed & Space</h2>
-    <p>Start compressing and converting your images online with ease.</p>
-    <a href="#tools" class="PicSqeeze/img-sqeeze.html" style="background:#ff9800; color:#fff;">🚀 Launch Compression & Conversion Tools</a>
-  </section>
+  <!-- ✅ Features Section -->
+  <section id="features">
+    <h2>Why Choose PicSqeeze?</h2>
+    <p>Simplify your image handling with powerful, secure, and fast tools.</p>
 
-  <section class="features" id="features">
-    <div class="feature">
-      <h3>Compress Images</h3>
-      <p>Reduce file size without losing quality.</p>
-      <a href="#compress-tool" class="btn-link" style="background:#ff6f61; color:white;">🔧 Open Image Compressor</a>
-    </div>
-    <div class="feature">
-      <h3>Convert Formats</h3>
-      <p>JPEG ↔ PNG ↔ GIF conversions made simple.</p>
-      <a href="#convert-tool" class="btn-link" style="background:#6a5acd; color:white;">🔁 Start Format Conversion</a>
-    </div>
-    <div class="feature">
-      <h3>Choose Quality</h3>
-      <p>Set your desired compression level.</p>
-      <a href="#quality-setting" class="PicSqeeze/img-sqeeze.html" style="background:#009688; color:white;">⚙️ Set Compression Quality</a>
-    </div>
-    <div class="feature">
-      <h3>Download Results</h3>
-      <p>Get compressed or converted images in one click.</p>
-      <a href="#download-section" class="PicSqeeze/img-sqeeze.html" style="background:#e91e63; color:white;">📂 Download Your Files</a>
+    <div class="features">
+      <div class="feature">
+        <h3>🔧 Compress Images</h3>
+        <p>Shrink image sizes without noticeable quality loss to save space and speed up loading.</p>
+      </div>
+      <div class="feature">
+        <h3>🔁 Convert Formats</h3>
+        <p>Easily convert between JPEG, PNG, and GIF formats with a few clicks.</p>
+      </div>
+      <div class="feature">
+        <h3>⚙️ Adjustable Quality</h3>
+        <p>Select your preferred compression level from high to ultra-efficient.</p>
+      </div>
+      <div class="feature">
+        <h3>📥 Download Instantly</h3>
+        <p>Get your processed images quickly without waiting or signups.</p>
+      </div>
     </div>
   </section>
 
-  <section id="tools">
-    <h2>Our Tools</h2>
-    <p>All-in-one suite for image compression & format conversion</p>
-    <a href="#compress-tool" class="PicSqeeze/img-sqeeze.html" style="background:#673ab7; color:white;">🖼️ Go to Image Compressor</a>
-    <a href="#convert-tool" class="PicSqeeze/img-sqeeze.html" style="background:#3f51b5; color:white;">🎨 Open Format Converter</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Have questions or feedback?</p>
-    <a href="mailto:support@picsqeeze.com" class="btn-link" style="background:#4caf50; color:white;">✉️ Email Our Support Team</a>
-  </section>
-
+  <!-- 📬 Footer -->
   <footer>
-    <p>&copy; 2025 PicSqeeze. All rights reserved.</p>
+    <p>&copy; 2025 PicSqeeze. All rights reserved. | <a href="mailto:support@picsqeeze.com" style="color:#ccc;">support@picsqeeze.com</a></p>
   </footer>
+
 </body>
 
 </html>
+
